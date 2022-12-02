@@ -1,0 +1,22 @@
+<div class="col-md-4 offset-md-4">
+    <div class="card">
+        <div class="card-header text-danger">
+            <h1>Login form</h1>
+        </div>
+        <div class="card card-body">
+            <form #loginForm="ngForm" (ngSubmit)="submit(loginForm)">
+                <label for="name" class="form-label">Email-ID</label>
+                <input type="email" class="form-control" name="name" ngModel>
+                <label for="pass" class="form-label">Password</label>
+                <input type="password" class="form-control" name="pass" ngModel>
+          
+                <div>
+                <button class="btn btn-primary" type="submit">Login</button>
+                <button class="btn btn-secondary" type="reset">Reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+

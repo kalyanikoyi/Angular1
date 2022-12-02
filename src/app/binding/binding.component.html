@@ -1,0 +1,61 @@
+<h1 class="text-primary">BINDING</h1>
+<h1>--------------- ONE WAY DATA BINDING--------------</h1>
+
+<h2 class="text-danger">INTERPOLATION</h2>
+
+<p>{{name}}</p>
+<p>{{"welcome to " + name }}</p>
+<p>{{name.length}}</p>
+<p>{{name.toUpperCase()}}</p>
+<h3>{{details()}}</h3>
+<h3>{{stdDetails.age}}</h3>
+<h3>{{Array}}</h3>
+<h3>{{Array[0]}}</h3>
+<h3>{{Array.length}}</h3>
+<h3>{{10/10}}</h3><hr>
+
+<h1 class="text-danger">PROPERTY BINDING</h1>
+
+<img [src]="src" [alt]="alt" height="200px" width="200px" [title]="name">
+<h3 [innerHTML]="name" [style.color]="color"></h3>
+<input type="text" [disabled]="enable" [value]="name">
+
+<button (click)="isEnable()">Enable</button><hr>
+
+
+<h1 class="text-danger">ATTRIBUTE BINDING</h1>
+
+<a [href]="link" target="_blank" [attr.updateLink]>Naukry</a>
+<h1>Table</h1>
+<table class="table table-bordered responsive-medium" height="100px">
+    <tr>
+        <td>name</td>
+        <td>age</td>
+        <td>gender</td>
+    </tr>
+    <tr>
+        <td>kalyani</td>
+        <td>26</td>
+        <td [attr.rowspan]="num">Female</td>
+    </tr>
+    <tr>
+        <td>manu</td>
+        <td>4</td>
+    </tr>
+</table><hr>
+
+<h1 class="text-danger">STYLE BINDING</h1>
+<h3 [style.color]="'blue'">{{name}}</h3>
+<h3 [style.color]="variable">{{Array[1]}}</h3>
+<h3 [style.color]="required? 'red' :'purple'">{{Array[3]}}</h3>
+<h3 [ngStyle]="mystyles">I am kalyani</h3><hr>
+
+<h1 class="text-danger">CLASS BINDING</h1>
+<h3 [ngClass]="group">{{Array[2]}}</h3><br><br><hr>
+
+<h1>------------- TWO WAY DATA BINDING------------------</h1>
+
+
+<input type="text" name="" id="" [(ngModel)]="data">
+
+<h3>{{data}}</h3>
