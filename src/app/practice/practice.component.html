@@ -1,0 +1,61 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+    <div class="card">
+        <div class="card-header">
+            <h1 class="text-center">Student Details</h1>
+        </div>
+        <div class="card-body">
+           <table class="table table-bordered ">
+               <tr>
+                <th>S.No</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+               </tr>
+               <tr *ngFor="let user of use ,index as i">
+                <td>{{i+1}}</td>
+                <td>{{user.sname}}</td>
+                <td>{{user.age}}</td>
+                <td>{{user.gender}}</td>
+                <td>  <button class="btn-edit" (click)="editDetails(user.id)">Edit</button> </td>
+                 <td> <button class="btn-delete" (click)="deleteDetails(user.id)">Delete</button></td> 
+            
+               </tr>
+               
+               <td colspan="3"><button class="btn btn-primary" (click)="showForm()">Add student details</button></td>
+            
+           </table>
+        </div>
+    </div>
+</div>
+<div class="col">
+
+
+    <div class="card" *ngIf="show">
+<form #stdForm="ngForm" (ngSubmit)="submit(stdForm)">
+    <div class="form-group col-md-4">
+        <label for="name">Name</label>
+        <input type="text" name="sname" ngModel id="">
+    </div>
+    <div class="form-group col-md-4">
+        <label for="age">Age</label><br>
+        <input type="number" name="age" ngModel id="">
+    </div>
+    <div class="form-group">
+        <label for="gender">Gender: </label>
+        <span>
+        <input type="radio" name="gender"  value="Male" ngModel>Male
+        <input type="radio" name="gender"  value="Female" ngModel >Female
+        <input type="radio" name="gender"  value="Other" ngModel >Other
+
+    </span>
+    </div>
+    <button class="btn btn-primary">Add</button>
+
+</form>
+</div>
+</div>
+</div>
+</div>

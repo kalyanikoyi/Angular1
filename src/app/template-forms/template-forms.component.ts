@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -6,10 +6,21 @@ import { NgForm } from '@angular/forms';
   templateUrl: './template-forms.component.html',
   styleUrls: ['./template-forms.component.css']
 })
-export class TemplateFormsComponent {
+export class TemplateFormsComponent implements OnInit{
+ngOnInit(){
 
-submit(loginForm:NgForm){
-  console.log(loginForm.value);
-  
+}
+
+submit(formValue:NgForm){
+  console.log(formValue.value);
+}
+loadValues(formValue:NgForm){
+  let details ={
+    ename:'kalyani',
+    }
+    formValue.setValue(details);
+}
+resetForm(formValue:NgForm){
+  formValue.reset()
 }
 }

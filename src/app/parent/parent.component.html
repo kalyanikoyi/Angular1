@@ -1,0 +1,8 @@
+<p>parent works!</p>
+
+<app-child [parent]="name" [cName]="channel" (sendDetails)="msg=$event"></app-child>
+<ol>
+    <li *ngFor="let mas of msg">
+        {{mas.name}} {{mas.age}}
+    </li>
+</ol>

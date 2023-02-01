@@ -1,0 +1,28 @@
+{
+  "details": [
+    {
+      "id": 3,
+      "sname": "manasvi",
+      "age": 4,
+      "gender": "female"
+    },
+    {
+      "id": 4,
+      "sname": "manvika",
+      "age": 3,
+      "gender": "female"
+    },
+    {
+      "sname": "kalyani",
+      "age": 26,
+      "gender": "Female",
+      "id": 7
+    },
+    {
+      "sname": "chalapathi",
+      "age": 36,
+      "gender": "Male",
+      "id": 8
+    }
+  ]
+}

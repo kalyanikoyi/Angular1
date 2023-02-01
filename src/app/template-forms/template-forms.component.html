@@ -6,13 +6,16 @@
         <div class="card card-body">
             <form #loginForm="ngForm" (ngSubmit)="submit(loginForm)">
                 <label for="name" class="form-label">Email-ID</label>
-                <input type="email" class="form-control" name="name" ngModel>
+                <input type="email" class="form-control" name="ename" ngModel>
                 <label for="pass" class="form-label">Password</label>
                 <input type="password" class="form-control" name="pass" ngModel>
+                <input type="checkbox" ngModel name="terms" required>Accept Terms &conditions
           
                 <div>
-                <button class="btn btn-primary" type="submit">Login</button>
-                <button class="btn btn-secondary" type="reset">Reset</button>
+                <button [disabled]="!loginForm.valid" class="btn btn-primary" type="submit">Login</button>
+                <button class="btn btn-secondary" (click)="resetForm(loginForm)">Reset</button>
+                <button class="btn btn-secondary" (click)="loadValues(loginForm)">load values</button>
+
                 </div>
             </form>
         </div>

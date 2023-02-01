@@ -1,0 +1,29 @@
+<h1>The park</h1>
+
+<label for="name">Customer name</label><br>
+<input type="text" [(ngModel)]="customerName"><br>
+<label for="age">customer age</label><br>
+<input type="number" [(ngModel)]="customerage"><br>
+<button class="btn btn-primary" type="submit" (click)="showThese()">Submit</button>
+
+<div *ngIf="show">
+<h2 [ngStyle]="{'color':'red','font-style':'italic'}" >Hello {{customerName}}.
+    These are the facilities available for u</h2>
+
+<ul>
+    <li class="success">Food</li>
+    <li class="success">Swimming</li>
+    <li [ngClass]="gympass()" >Gym</li>
+    <li [ngClass]="pubpass()">Pub</li>
+</ul> 
+</div>   
+<h1>Members of park</h1>
+<ul>
+    <li *ngFor="let member of memDetails">
+<h4>{{member.name}}</h4>
+<h3>{{member.designation}}</h3>
+    </li>
+</ul>
+
+
+
