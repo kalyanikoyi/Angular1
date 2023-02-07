@@ -4,7 +4,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http'
 
 import { AppComponent } from './app.component';
-import { TemplateFormsComponent } from './template-forms/template-forms.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { MagicalComponent } from './magical/magical.component';
 import { PracticeComponent } from './practice/practice.component';
@@ -17,11 +16,12 @@ import { ClassBindingComponent } from './Binding/OneWayBinding/class-binding/cla
 import { AttributeBindingComponent } from './Binding/OneWayBinding/attribute-binding/attribute-binding.component';
 import { EventBindingComponent } from './Binding/OneWayBinding/event-binding/event-binding.component';
 import { TwowayBindingComponent } from './Binding/TwoWayBinding/twoway-binding/twoway-binding.component';
+import { StructuralComponent } from './Directives/structural/structural/structural.component';
+import { AttributeComponent } from './Directives/attribute/attribute/attribute.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TemplateFormsComponent,
     PipesComponent,
     MagicalComponent,
     PracticeComponent,
@@ -33,7 +33,9 @@ import { TwowayBindingComponent } from './Binding/TwoWayBinding/twoway-binding/t
     ClassBindingComponent,
     AttributeBindingComponent,
     EventBindingComponent,
-    TwowayBindingComponent
+    TwowayBindingComponent,
+    StructuralComponent,
+    AttributeComponent
   ],
   imports: [
     BrowserModule,

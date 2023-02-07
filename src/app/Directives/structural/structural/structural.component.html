@@ -1,0 +1,34 @@
+<!-- --------------- NG IF ------------------------ -->
+
+<div *ngIf="show">kalyani</div>
+
+<!-- ------------------ Ng If else --------------- -->
+
+<div *ngIf="display ; else hide ">kalyani</div>
+<ng-template #hide>Chalapathi</ng-template>
+
+<!-- -------------------- Ng If then else --------------
+
+<div *ngIf="true ; then this ; else that"></div>
+<ng-template #this>Chalapathi</ng-template>
+<ng-template #that></ng-template> -->
+
+<!-- --------------------- Ng for -------------------- -->
+
+<ul *ngFor="let det of details">
+    <li>My name is {{det.name}}. I am {{det.age}} yrs old & i am {{det.gender}}.</li>
+</ul>
+
+<!-- -------------------------- Ng switch ------------ -->
+
+<div [ngSwitch]="value">
+    <div *ngSwitchCase="1">Sunday</div>
+    <div *ngSwitchCase="2">Monday</div>
+    <div *ngSwitchCase="3">Tuesday</div>
+    <div *ngSwitchCase="4">Wednesday</div>
+    <div *ngSwitchCase="5">Thursday</div>
+    <div *ngSwitchCase="6">Friday</div>
+    <div *ngSwitchCase="7">saturday</div> 
+    <div *ngSwitchDefault>Show this</div>   
+
+</div>

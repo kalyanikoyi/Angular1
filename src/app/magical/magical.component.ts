@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class MagicalComponent {
   customerName="";
-  customerage =30
+  customerage = 0
   show=false
 
   showThese(){

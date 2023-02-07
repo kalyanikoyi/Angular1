@@ -1,0 +1,12 @@
+<!-- ---------------- Ng style -------------- -->
+
+<div [ngStyle]="{'color':'red'}">Kalyani</div>
+<div [ngStyle]="{'color':DynamicValue}">Chalapathi</div>
+<div [ngStyle]="{'color':textColor === 'red'? 'red': 'green'}"> Manu & Junnu</div>
+
+<!-- ------------------ Ng Class ------------ -->
+
+<div [ngClass]="'c1'">This is normal class</div>
+<div [ngClass]="'c1 c2'">We can add multiple classes</div>
+<div [ngClass]="variable">Dynamic value</div>
+<div [ngClass]="variable === 'c3'? 'c2' : 'c3'"> Conditional class</div>
